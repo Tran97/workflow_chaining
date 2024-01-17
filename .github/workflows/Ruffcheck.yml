@@ -31,3 +31,5 @@ jobs:
         pip install ruff
         ruff check --fix .
         ruff format
+    - name: print
+      run: echo "patito"
