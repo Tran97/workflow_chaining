@@ -32,3 +32,4 @@ jobs:
         pip install ruff
         ruff check --fix .
         ruff format
+      run: echo "hola mundo"
