@@ -23,6 +23,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
 
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -30,4 +32,4 @@ jobs:
         python-version: ${{ matrix.python-version }}
     
     - name: print
-      run: echo "hola senior"
+      run: echo "hola mundo"
