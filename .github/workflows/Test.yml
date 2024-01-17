@@ -2,11 +2,14 @@
 name: Ole
 
 on:
-  workflow_run:
-    workflows:
-      - Benny
-    types:
-      - completed
+  pull_request:
+    branches: [ main ]
+#on:
+  #workflow_run:
+    #workflows:
+      #- Benny
+    #types:
+      #- completed
 
 jobs:
   test-job:
