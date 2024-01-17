@@ -1,9 +1,5 @@
 ---
-name: Preflight
-
-#on:
-  #- pull_request
-  #- push
+name: Ruffcheck
 
 on:
   pull_request:
