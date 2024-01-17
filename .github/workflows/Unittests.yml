@@ -13,6 +13,7 @@ jobs:
     name: Test Step
     runs-on: ubuntu-latest
     steps:
-    - name: Echo Something
-      run: echo "Hello, this is an example echo!"
-      run: echo "Hello, this is an example echo!"
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+      - run: echo "hello world"
