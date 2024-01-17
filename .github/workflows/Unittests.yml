@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-    name: Unit tests
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -29,3 +28,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+    
+    - name: print
+      run: echo "hola senior"

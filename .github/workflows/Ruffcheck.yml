@@ -6,7 +6,6 @@ on:
 
 jobs:
   build:
-    name: Code check
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
