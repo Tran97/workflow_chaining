@@ -1,5 +1,5 @@
 ---
-name: Preflight
+name: Benny
 
 on:
   pull_request:

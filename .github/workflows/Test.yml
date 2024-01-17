@@ -1,10 +1,10 @@
 ---
-name: Test
+name: Ole
 
 on:
   workflow_run:
     workflows:
-      - Preflight
+      - Benny
     types:
       - completed
 
