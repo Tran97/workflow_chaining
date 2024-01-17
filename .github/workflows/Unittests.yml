@@ -15,4 +15,3 @@ jobs:
     steps:
     - name: Echo Something
       run: echo "Hello, this is an example echo!"
-      run: echo "Hello, this is an example echo!"
