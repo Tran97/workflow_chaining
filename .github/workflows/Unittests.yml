@@ -15,3 +15,6 @@ jobs:
     steps:
     - name: Echo Something
       run: echo "Hello, this is an example echo!"
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
