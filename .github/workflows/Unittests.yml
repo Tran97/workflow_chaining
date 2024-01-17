@@ -1,19 +1,31 @@
----
-name: Pytest
+# Install with cache
+name: Run unit tests
 
 on:
   workflow_run:
     workflows:
-      - Ruffcodecheck
+      - Ruff code check
     types:
       - completed
 
 jobs:
-  test-job:
-    name: Test Step
-    runs-on: ubuntu-latest
+  build:
+    name: Unit tests
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11"]
+        # exclude:
+        #   - os: windows-latest
+        #     python-version: "3.9"
+
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.workflow_run.head_branch }}
-      - run: echo "hello world"
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
