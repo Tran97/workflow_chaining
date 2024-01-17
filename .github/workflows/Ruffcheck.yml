@@ -1,5 +1,5 @@
 ---
-name: Ruffcheck
+name: Ruffcodecheck
 
 on:
   pull_request:
